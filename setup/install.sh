@@ -19,7 +19,7 @@ MYSQL_ROOT_PASSWORD=`pwgen 12 -1`
 debconf-set-selections <<< 'mariadb-server-5.5 mysql-server/root_password password $MYSQL_ROOT_PASSWORD'
 debconf-set-selections <<< 'mariadb-server-5.5 mysql-server/root_password_again password $MYSQL_ROOT_PASSWORD'
 
-curl -sL https://deb.nodesource.com/setup_7.x | bash -
+curl -sL https://deb.nodesource.com/setup_12.x | bash -
 apt-get -q -y install mariadb-server nodejs imagemagick git ufw build-essential dnsutils python software-properties-common
 
 apt-add-repository -y ppa:chris-lea/redis-server
